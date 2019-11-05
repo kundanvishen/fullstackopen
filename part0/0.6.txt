@@ -1,0 +1,13 @@
+note over browser:
+save button on form is clicked
+end note
+note over browser:
+Browser sends a POST request at /new_note_spa with JSON data
+end note
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server-->browser: HTTP 201 URL (no redirect)
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+

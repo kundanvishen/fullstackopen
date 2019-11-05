@@ -1,0 +1,13 @@
+note over browser:
+save button on form is clicked
+end note
+note over browser:
+Browser submits the user input via POST
+end note
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+server-->browser: HTTP 302 URL Redirect to /notes
+note over browser:
+Browser sends a GET request to /notes as defined in the response header
+end note
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+
